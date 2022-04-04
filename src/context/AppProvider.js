@@ -4,6 +4,7 @@ import { requestPosts } from '../actions/codeleapAPI'
 
 function AppProvider({ children }) {
   const [allPosts, setPosts] = useState([]);
+  const [username, setUsername] = useState('')
 
   const getAllPosts = async () => {
     const posts = await requestPosts();
@@ -13,7 +14,7 @@ function AppProvider({ children }) {
     getAllPosts();
   }, []);
   return(
-    <AppContext.Provider value={ { allPosts } }>
+    <AppContext.Provider value={ { allPosts, username, setUsername } }>
       { children }
       </AppContext.Provider>
   );
