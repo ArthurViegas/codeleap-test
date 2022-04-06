@@ -1,0 +1,101 @@
+.main-container {
+  background-color: rgb(219, 219, 219);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.middle-section {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.middle-header {
+  background-color: black;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.middle-header h3 {
+  margin: 0;
+  padding: 1.5em 0;
+  width: 90%;
+}
+
+.post-form-container {
+  border: 2px solid rgb(175, 175, 175);
+  display: flex;
+  margin: 3em 0;
+  justify-content: center;
+  width: 90%;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+}
+
+.post-form h3 {
+  margin: 1.2em 0;
+}
+
+.post-form input {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  padding: 0.2em 0.4em;
+}
+
+.post-form input::placeholder, textarea::placeholder {
+  color: rgb(206, 206, 206);
+}
+
+.post-form textarea {
+  resize: none;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  padding: 0.2em 0.4em;
+}
+
+.post-form-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post-form-footer div {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 1.2em;
+}
+
+.post-form-footer div button {
+  margin-left: 2em;
+  background-color: black;
+  border: none;
+  color:white;
+  font-weight: 600;
+  height: 2em;
+  transition: 0.2s;
+  width: 7em;
+}
+
+
+.post-form-footer div button:hover {
+  cursor: pointer;
+}
+
+.post-form-footer div button:disabled {
+  border: none;
+  background-color: rgb(156, 156, 156);
+}
+
+.post-form-footer div button:disabled:hover {
+  cursor: default;
+}
