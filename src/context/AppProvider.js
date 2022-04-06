@@ -6,16 +6,23 @@ function AppProvider({ children }) {
   const [allPosts, setPosts] = useState([]);
   const [username, setUsername] = useState('');
   const [loged, setLoged] = useState(false); // may be to give unique acces to logged users  
-
+  // const [token, setToken] = useState('')
+  
   const getAllPosts = async () => {
     const posts = await requestPosts();
     setPosts(posts.results)
   }
+
   useEffect(() => {
     getAllPosts();
   }, []);
   return(
-    <AppContext.Provider value={ { allPosts, username, setUsername, setLoged } }>
+    <AppContext.Provider value={ { 
+      allPosts,
+      username,
+      setUsername,
+      setLoged,
+    } }>
       { children }
       </AppContext.Provider>
   );
